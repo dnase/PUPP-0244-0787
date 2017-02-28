@@ -31,4 +31,5 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
+  notify { 'this node is getting the default configuration': }
 }
