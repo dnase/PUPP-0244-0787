@@ -22,7 +22,10 @@ Host <<| tag == 'puppetlabs' |>>
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
-
+node 'drewbilee.puppetlabs.vm' {
+  include role::classroom
+  notify { 'this node is getting node-specific configuration': }
+}
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
