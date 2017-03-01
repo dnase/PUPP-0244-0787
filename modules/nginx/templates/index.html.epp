@@ -1,0 +1,8 @@
+<html>
+<head></head>
+<body>
+  <h1>Puppet is win!</h1>
+  <h2>Welcome to <%= $fqdn %></h2>
+  <h3>I'm serving from IP address: <%= $ipaddress %></h3>
+</body>
+</html>

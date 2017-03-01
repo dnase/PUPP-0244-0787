@@ -1,10 +1,7 @@
-# For more information on configuration, see:
-#   * Official English Documentation: http://nginx.org/en/docs/
-#   * Official Russian Documentation: http://nginx.org/ru/docs/
 
-user nginx;
+user <%= $user %>;
 worker_processes auto;
-error_log /var/log/nginx/error.log;
+error_log <%= $logdir %>/error.log;
 pid /var/run/nginx.pid;
 
 # Load dynamic modules. See /usr/share/nginx/README.dynamic.
@@ -28,11 +25,11 @@ http {
     keepalive_timeout   65;
     types_hash_max_size 2048;
 
-    include             /etc/nginx/mime.types;
+    include             <%= $confdir %>/mime.types;
     default_type        application/octet-stream;
 
     # Load modular configuration files from the /etc/nginx/conf.d directory.
     # See http://nginx.org/en/docs/ngx_core_module.html#include
     # for more information.
-    include /etc/nginx/conf.d/*.conf;
+    include <%= $blockdir %>/*.conf;
 }
