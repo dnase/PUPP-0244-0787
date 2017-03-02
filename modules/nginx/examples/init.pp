@@ -1,4 +1,1 @@
-class { 'nginx':
-  root     => '/var/www/html',
-  highperf => false,
-}
+include ::nginx
