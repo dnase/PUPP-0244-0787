@@ -1,0 +1,6 @@
+mod 'puppetlabs/apache'
+mod 'puppetlabs/mysql'
+mod 'puppetlabs/stdlib'
+mod 'puppetlabs/concat'
+mod 'puppet/staging'
+mod 'hunner/wordpress'
